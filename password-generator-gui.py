@@ -139,9 +139,9 @@ def ResourcePath(relativePath):
     return os.path.join(basePath, relativePath)
 
 wordsList = list(SplitFile(open(ResourcePath('words.txt')).read().splitlines(), ['--NOUNS--', '--ADJECTIVES--', '--VERBS--']))
-nounsList = wordsList[0]
-adjectivesList = wordsList[1]
-verbsList = wordsList[2]
+nounsList = wordsList[0][1:]
+adjectivesList = wordsList[1][1:]
+verbsList = wordsList[2][1:]
 window = sg.Window("Password Generator", layout)
 while True:
     window.refresh()
