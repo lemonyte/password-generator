@@ -6,7 +6,7 @@ sg.theme('black')
 layout = [
     [
         sg.Column([
-            [sg.Radio("Random", 'random_words_radio', key='random_radio', default=True, enable_events=True), sg.Radio("Words", 'random_words_radio', key='words_radio', default=False, enable_events=True)], 
+            [sg.Radio("Characters", 'random_words_radio', key='random_radio', default=True, enable_events=True), sg.Radio("Words", 'random_words_radio', key='words_radio', default=False, enable_events=True)], 
             [sg.Checkbox("Include lowercase letters", key='lower_checkbox', default=True)], 
             [sg.Checkbox("Include uppercase letters", key='upper_checkbox', default=True)], 
             [sg.Checkbox("Include numbers", key='numbers_checkbox', default=True)], 
@@ -17,7 +17,7 @@ layout = [
             [sg.Text("Password length", key='length_title')], 
             [sg.Input(default_text='8', key='length', enable_events=True, size=(30, 1))], 
             [sg.Text(key='length_text', size=(40, 2))], 
-            [sg.Button("Generate Password", key='generate_button')]
+            [sg.Button("Generate Password", key='generate_button', bind_return_key=True)]
         ], vertical_alignment='top'), 
         sg.VerticalSeparator(), 
         sg.Column([

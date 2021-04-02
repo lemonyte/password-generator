@@ -146,7 +146,6 @@ flight
 length
 magazine
 newspaper
-relationship
 teaching
 cell
 dealer
@@ -233,6 +232,7 @@ entry
 interaction
 mixture
 preference
+password
 region
 republic
 tradition
@@ -363,7 +363,6 @@ reception
 replacement
 revolution
 river
-son
 speech
 tea
 village
@@ -416,7 +415,6 @@ assignment
 assistant
 bathroom
 bedroom
-beer
 birthday
 celebration
 championship
@@ -429,7 +427,7 @@ dirt
 ear
 fortune
 friendship
-funeral
+motherland
 gene
 hat
 indication
@@ -678,9 +676,7 @@ capital
 challenge
 friend
 self
-shot
 brush
-couple
 debate
 exit
 front
@@ -740,6 +736,7 @@ club
 edge
 evidence
 fan
+pi
 letter
 lock
 maximum
@@ -774,7 +771,6 @@ ideal
 kitchen
 land
 log
-mother
 net
 party
 principle
@@ -805,7 +801,6 @@ angle
 blue
 breakfast
 confidence
-daughter
 degree
 doctor
 dot
@@ -936,7 +931,6 @@ towel
 vacation
 west
 wheel
-wine
 arm
 aside
 associate
@@ -985,6 +979,7 @@ trust
 assist
 bake
 bar
+jazz
 bell
 bike
 blame
@@ -995,7 +990,6 @@ clue
 collar
 comment
 conference
-devil
 diet
 fear
 fuel
@@ -1010,6 +1004,7 @@ panic
 peak
 plane
 reward
+blueberry
 row
 sandwich
 shock
@@ -1036,6 +1031,7 @@ counter
 flower
 harm
 knee
+raspberry
 lawyer
 leather
 load
@@ -1046,7 +1042,6 @@ plate
 purple
 ruin
 ship
-skirt
 slice
 snow
 specialist
@@ -1067,6 +1062,7 @@ carpet
 cat
 champion
 channel
+strawberry
 clock
 comfort
 cow
@@ -1075,7 +1071,6 @@ engineer
 entrance
 fault
 grass
-guy
 hell
 highlight
 incident
@@ -1116,6 +1111,7 @@ most
 other
 use
 make
+lime
 good
 look
 help
@@ -1201,6 +1197,7 @@ produce
 search
 present
 spend
+lemon
 talk
 creative
 tell
@@ -1318,6 +1315,7 @@ beat
 burn
 deposit
 print
+debug
 raise
 sleep
 somewhere
@@ -1335,6 +1333,7 @@ join
 sensitive
 tap
 win
+bruh
 attack
 claim
 constant
@@ -1380,6 +1379,7 @@ tie
 adult
 brief
 crazy
+LemonPi314
 escape
 gather
 hate
@@ -1391,8 +1391,6 @@ scratch
 strike
 employ
 external
-hurt
-illegal
 laugh
 lay
 mobile
@@ -1406,6 +1404,7 @@ strain
 struggle
 swim
 train
+yoda
 upper
 wash
 yellow
@@ -1434,11 +1433,9 @@ usual
 abroad
 brave
 calm
-LemonPi314
 concentrate
 estimate
 grand
-male
 mine
 prompt
 quiet
@@ -1451,7 +1448,6 @@ portal
 shift
 shine
 steal
-suck
 surround
 anybody
 bear
@@ -1459,13 +1455,12 @@ brilliant
 dare
 dear
 delay
-drunk
-female
 hurry
 inevitable
 invite
 neat
 pop
+shorturl.at/DF067
 punch
 quit
 reply
@@ -1615,11 +1610,6 @@ asleep
 confident
 conscious
 decent
-embarrassed
-guilty
-lonely
-mad
-nervous
 odd
 remarkable
 substantial
@@ -1663,6 +1653,7 @@ long
 small
 less
 high
+rickrolled
 certain
 little
 common
@@ -1829,7 +1820,6 @@ rough
 sad
 strange
 external
-illegal
 loud
 mobile
 nasty
@@ -1850,18 +1840,14 @@ upstairs
 usual
 brave
 calm
-dirty
 downtown
 grand
 honest
 loose
-male
 quiet
 brilliant
 dear
-drunk
 empty
-female
 inevitable
 neat
 ok
@@ -1927,7 +1913,6 @@ north
 square
 born
 capital
-shot
 front
 living
 plastic
@@ -1953,7 +1938,6 @@ red
 vegetable
 ideal
 kitchen
-mother
 party
 relative
 signal
@@ -1963,7 +1947,6 @@ minimum
 sea
 south
 status
-daughter
 hour
 trick
 afternoon
@@ -1989,7 +1972,6 @@ mountain
 patient
 proof
 west
-wine
 expert
 native
 opening
@@ -2332,7 +2314,6 @@ join
 sit
 tap
 win
-attack
 claim
 drag
 drink
@@ -2630,7 +2611,6 @@ challenge
 friend
 warm
 brush
-couple
 debate
 exit
 experienced
@@ -2889,7 +2869,6 @@ clue
 collar
 comment
 conference
-devil
 diet
 fear
 fuel
@@ -2926,7 +2905,6 @@ clerk
 cloud
 concert
 counter
-dirty
 flower
 knee
 lawyer
@@ -2940,7 +2918,6 @@ pleased
 proposed
 ruin
 ship
-skirt
 slice
 snow
 switch
@@ -2970,7 +2947,6 @@ engineer
 entrance
 fault
 grass
-guy
 highlight
 island
 joke
