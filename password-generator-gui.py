@@ -150,7 +150,7 @@ while True:
         break
     
     try:
-        if event == 'length' and values['length'] != '' and values['length'][-1] not in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+        if event == 'length' and values['length'] != '' and values['length'][-1] not in '0123456789':
             window['length'].update(values['length'][:-1])
 
         elif event == 'length':

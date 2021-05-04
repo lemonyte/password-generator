@@ -1,5 +1,5 @@
 import string, random, time#, inquirer
-from pyconsole import Color
+from pyco import Color
 #from collections import namedtuple
 #from blessed import Terminal
 #term = Terminal()
@@ -214,7 +214,7 @@ for char in passwordChars:
 print("\n")
 # Print the words, separated by gray commas
 for word in passwordWords:
-    print(word, end=Color.BrightBlack + ", " + Color.Reset)
+    print(word, end=Color.Fore.BRIGHT_BLACK + ", " + Color.Style.RESET)
 
 print("\n")
 # Prompt for user input before exiting the program
