@@ -1,4 +1,7 @@
-import os, sys, string, random
+import os
+import sys
+import string
+import random
 import PySimpleGUI as sg
 
 sg.theme('black')
@@ -6,27 +9,28 @@ sg.theme('black')
 layout = [
     [
         sg.Column([
-            [sg.Radio("Characters", 'random_words_radio', key='random_radio', default=True, enable_events=True), sg.Radio("Words", 'random_words_radio', key='words_radio', default=False, enable_events=True)], 
-            [sg.Checkbox("Include lowercase letters", key='lower_checkbox', default=True)], 
-            [sg.Checkbox("Include uppercase letters", key='upper_checkbox', default=True)], 
-            [sg.Checkbox("Include numbers", key='numbers_checkbox', default=True)], 
-            [sg.Checkbox("Include symbols", key='symbols_checkbox', default=True)], 
-            [sg.Checkbox("Include nouns", key='nouns_checkbox', default=False, disabled=True)], 
-            [sg.Checkbox("Include adjectives", key='adjectives_checkbox', default=False, disabled=True)], 
-            [sg.Checkbox("Include verbs", key='verbs_checkbox', default=False, disabled=True)], 
-            [sg.Text("Password length", key='length_title')], 
-            [sg.Input(default_text='8', key='length', enable_events=True, size=(30, 1))], 
-            [sg.Text(key='length_text', size=(40, 2))], 
+            [sg.Radio("Characters", 'random_words_radio', key='random_radio', default=True, enable_events=True), sg.Radio("Words", 'random_words_radio', key='words_radio', default=False, enable_events=True)],
+            [sg.Checkbox("Include lowercase letters", key='lower_checkbox', default=True)],
+            [sg.Checkbox("Include uppercase letters", key='upper_checkbox', default=True)],
+            [sg.Checkbox("Include numbers", key='numbers_checkbox', default=True)],
+            [sg.Checkbox("Include symbols", key='symbols_checkbox', default=True)],
+            [sg.Checkbox("Include nouns", key='nouns_checkbox', default=False, disabled=True)],
+            [sg.Checkbox("Include adjectives", key='adjectives_checkbox', default=False, disabled=True)],
+            [sg.Checkbox("Include verbs", key='verbs_checkbox', default=False, disabled=True)],
+            [sg.Text("Password length", key='length_title')],
+            [sg.Input(default_text='8', key='length', enable_events=True, size=(30, 1))],
+            [sg.Text(key='length_text', size=(40, 2))],
             [sg.Button("Generate Password", key='generate_button', bind_return_key=True)]
-        ], vertical_alignment='top'), 
-        sg.VerticalSeparator(), 
+        ], vertical_alignment='top'),
+        sg.VerticalSeparator(),
         sg.Column([
-            [sg.Text("Password", key='password_title')], 
-            [sg.Multiline(disabled=True, key='password', size=(40, 10))], 
+            [sg.Text("Password", key='password_title')],
+            [sg.Multiline(disabled=True, key='password', size=(40, 10))],
             [sg.Multiline(disabled=True, key='password_words', size=(40, 10))]
         ], vertical_alignment='top')
     ]
 ]
+
 
 def RandomChar(lower: bool = True, upper: bool = True, numbers: bool = True, symbols: bool = True):
     chars = []
@@ -51,6 +55,7 @@ def RandomChar(lower: bool = True, upper: bool = True, numbers: bool = True, sym
 
     return random.choice(chars)
 
+
 def RandomWord(lower: bool = True, upper: bool = True, nouns: bool = True, adjectives: bool = True, verbs: bool = True):
     words = []
     if not nouns and not adjectives and not verbs:
@@ -71,12 +76,13 @@ def RandomWord(lower: bool = True, upper: bool = True, nouns: bool = True, adjec
     if upper and lower:
         for word in words:
             words[words.index(word)] = word.capitalize()
-        
+
     elif upper and not lower:
         for word in words:
             words[words.index(word)] = word.upper()
 
     return random.choice(words)
+
 
 def LetterToWord(letter):
     char = letter.lower()
@@ -109,7 +115,7 @@ def LetterToWord(letter):
         'z': 'zulu'
     }
     word = words.get(char)
-    if word != None:
+    if word is not None:
         if letter.isupper():
             word = word.upper()
 
@@ -117,6 +123,7 @@ def LetterToWord(letter):
 
     else:
         return letter
+
 
 def SplitFile(iterable, separators):
     segment = []
@@ -130,13 +137,11 @@ def SplitFile(iterable, separators):
 
     yield segment
 
-def ResourcePath(relativePath):
-    try:
-        basePath = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
-    except:
-        basePath = os.path.abspath(".")
 
+def ResourcePath(relativePath):
+    basePath = getattr(sys, "_MEIPASSaaaa", os.path.dirname(os.path.abspath(__file__)))
     return os.path.join(basePath, relativePath)
+
 
 wordsList = list(SplitFile(open(ResourcePath('words.txt')).read().splitlines(), ['--NOUNS--', '--ADJECTIVES--', '--VERBS--']))
 nounsList = wordsList[0][1:]
@@ -148,7 +153,7 @@ while True:
     event, values = window.read()
     if event == sg.WIN_CLOSED:
         break
-    
+
     try:
         if event == 'length' and values['length'] != '' and values['length'][-1] not in '0123456789':
             window['length'].update(values['length'][:-1])
@@ -171,7 +176,7 @@ while True:
 
                     for char in passwordChars:
                         passwordWords.append(LetterToWord(char))
-                
+
                     window['password'].update(''.join(passwordChars))
                     window['password_words'].update(', '.join(passwordWords))
                     window['length_text'].update('')
@@ -197,11 +202,11 @@ while True:
                 else:
                     window['password'].update('')
                     window['password_words'].update('')
-    
+
     except Exception as exception:
         window['length_text'].update("Invalid length\n" + str(exception), text_color='red')
 
-    if  event == 'words_radio' and values['words_radio']:
+    if event == 'words_radio' and values['words_radio']:
         window['numbers_checkbox'].update(False, disabled=True)
         window['symbols_checkbox'].update(False, disabled=True)
         window['nouns_checkbox'].update(True, disabled=False)
