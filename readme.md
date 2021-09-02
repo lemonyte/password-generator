@@ -12,9 +12,11 @@ Optional executable file for Windows users. Python and the required packages are
 - 10 MB of free space for the executable
 - 12 MB of free space for temporary files
 ## Usage
-The main program is called `password-generator`. Using this program is very easy. Simply select the characters or words you want in your password and click away on the "Generate Password" button!
+Download the executable file `password-generator.exe` from the [latest release](https://github.com/LemonPi314/password-generator/releases/latest). If you are not using Windows, download the source code and use the Python file.
 
-There is also a command line version available called `password-generator-cli`. This version does not include random word options.
+Using this program is very easy. Simply select the characters or words you want in your password and click away on the "Generate Password" button!
+
+There is also a command line version available called `password-generator-cli.exe`. This version does not include the random word option.
 ### Characters
 Generates a string of random characters.  
 Options:
