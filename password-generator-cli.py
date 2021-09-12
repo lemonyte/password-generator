@@ -1,9 +1,8 @@
-# Extremely simplified version
+# Simplified command line version
 import string
 import random
 
 
-# ==== FUNCTIONS ==== #
 def random_char(upper: bool = True, numbers: bool = True, symbols: bool = True) -> str:  # Function that returns a random character based on the parameters passed
     chars = []  # Create a list that will contain some characters, one of which will be returned
     prob = random.randrange(0, 10)  # Choose a random number between 0 and 9, later to be used for determining the probability of a number/symbol over a letter
@@ -87,7 +86,6 @@ def get_input():  # Get inputs for options from the user
     getting_input = False  # Stop the input options process if all the inputs are valid
 
 
-# ==== MAIN CODE SEQUENCE ==== #
 if __name__ == '__main__':
     getting_input = True
     while getting_input is True:  # Ask the user for input until they enter valid options
@@ -96,10 +94,8 @@ if __name__ == '__main__':
     password_words = []  # Initialize a list for the words corresponding to the letters
     for item in range(0, password_length):  # Generate the required number of characters, according to 'passLength'
         password_chars.append(random_char(upper, numbers, symbols))  # Add a random character to the list of characters in the password
-        print(password_chars[-1], end='')  # Print the character in the console
+    print(''.join(password_chars))  # Print the characters in the console
     for char in password_chars:  # For every letter in the password, generate a corresponding word
         password_words.append(letter_to_word(char))
-    print('\n')
-    for word in password_words:  # Print the words, separated by commas
-        print(word, end=', ')
+    print(', '.join(password_words))  # Print the words in the console
     input("\nPress enter to exit the program. ")  # Prompt for user input before exiting the program

@@ -1,11 +1,13 @@
 # Password Generator
 By [LemonPi314](https://github.com/LemonPi314)
 
-Generate secure passwords consisting of random characters or words.
+Thanks to [itsMimi](https://github.com/itsMimi) for the original idea.
+
+Generate passwords consisting of random characters or words.
 ## Requirements
 ### Python File
 Any operating system with Python.
-- [Python 3.9](https://www.python.org/downloads/) or higher
+- [Python 3.6](https://www.python.org/downloads/) or higher
 - [`PySimpleGUI`](https://pypi.org/project/PySimpleGUI/)
 ### Windows Systems
 Optional executable file for Windows users. Python and the required packages are included in the executable.

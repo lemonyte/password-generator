@@ -110,23 +110,24 @@ def letter_to_word(letter: str) -> str:
         return letter
 
 
-def split_file(iterable: list[str], separators: list[str]) -> str:
+def split_file(iterable: list, separators: list) -> list:
     segment = []
+    segments = []
     for element in iterable:
-        if element in separators:
-            if segment:
-                yield segment
+        if segment and element in separators:
+            segments.append(segment)
             segment = []
         segment.append(element)
-    yield segment
+    segments.append(segment)
+    return segments
 
 
 def resource_path(relative_path: str) -> str:
-    basePath = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(basePath, relative_path)
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
 
 
-word_list = list(split_file(open(resource_path('words.txt')).read().splitlines(), ['--NOUNS--', '--ADJECTIVES--', '--VERBS--']))
+word_list = split_file(open(resource_path('words.txt')).read().splitlines(), ['--NOUNS--', '--ADJECTIVES--', '--VERBS--'])
 noun_list = word_list[0][1:]
 adjective_list = word_list[1][1:]
 verb_list = word_list[2][1:]
