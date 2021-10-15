@@ -1,0 +1,6 @@
+.vscode/
+__pycache__/
+[Bb]uild/
+[Dd]ist/
+*env*
+*.xls*
