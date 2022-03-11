@@ -1,7 +1,7 @@
 # Password Generator
 By [LemonPi314](https://github.com/LemonPi314)
 
-Thanks to [itsMimi](https://github.com/itsMimi) for the original idea.
+Thanks to [itsMalb](https://github.com/itsMalb) for the original idea.
 
 Generate passwords consisting of random characters or words.
 ## Requirements
